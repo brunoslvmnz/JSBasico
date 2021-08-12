@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const nota1 = prompt('Informe a nota do primeiro bimestre:');
+        const nota2 = prompt('Informe a nota do segundo bimestre:');
+        const valornota1 = parseInt(nota1);
+        const valornota2 = parseInt(nota2);
+        const total = valornota1 + valornota2;
+        if (total>60)
+            alert(`Aluno aprovado com a nota de ${total}`);
+        else
+            alert(`Aluno reprovado, faltaram ${total-60} pontos.`);
+
+    </script>
+</head>
+<body>
+    <a href=""><button>Refazer</button></a>
+    <a href="index.html"><button>Voltar</button></a>
+</body>
+</html>
