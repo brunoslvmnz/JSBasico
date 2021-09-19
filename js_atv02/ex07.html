@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // amor deus sabedoria amizade companheirismo
+        texto = prompt("Informe um texto: ","amor deus sabedoria amizade companheirismo");
+        // a
+        letra = prompt("Informe uma letra: ","a");
+        // palavras a serem exibidas no corpo do documento: amor amizade
+        //1º Passo: obter as palavras do texto
+        // Exemplo de texto: "amor deus sabedoria amizade companheirismo"
+        // palavras: ["amor", "deus", "sabedoria", "amizade", "companheirismo"]
+        palavras = texto.split(" ");
+        // 2º Passo: verificar se a primeira palavra do texto inicia com a letra
+        // informada pelo usuario
+        /*primeiraPalavra = palavras[0]; //"amor"
+        if (primeiraPalavra.charAt(0) == letra) 
+            alert("A primeira palavra do texto inicia com a letra informada pelo usuario");
+        else 
+            alert("A primeira palavra do texto NÃO inicia com a letra informada pelo usuario"); */
+        achou = false;
+        for (i=0; i<palavras.length; i++) { // i = 2
+            palavra = palavras[i]; //"amor"
+            if (palavra.charAt(0) == letra) {
+                document.write(`<p>${palavra}</p>`);
+                achou = true;
+            }
+        }
+        if (!achou) document.write(`Não foi encontrada nenhuma palavra com a letra ${letra}`)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

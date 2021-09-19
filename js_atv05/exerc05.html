@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script>
+        function valida() {
+            login = (document.getElementById("txtLogin").value);
+            senha = (document.getElementById("txtSenha").value);
+            confirma = (document.getElementById("txtConfirma").value);
+
+            if (!login) {
+                alert("Login inválido! Digite um login válido");
+            }
+            else if (!senha || (senha != confirma)) {
+                alert("Senhas inválidas! Favor inserir senhas iguais");
+                document.getElementById("txtSenha").value = "";
+                document.getElementById("txtConfirma").value = "";
+            }
+            else
+            alert("Todos os campos foram digitados corretamente");
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Acesso ao Sistema</h1>
+    <form action="">
+        <table>
+            <tr>
+                <td class="direita"><label for="">Login:</label></td>
+                <td colspan="2"><input type="text" id="txtLogin"></td>
+            </tr>
+            <tr>
+                <td class="direita"><label for="">Senha:</label></td>
+                <td><input type="password" id="txtSenha" maxlength="8" size="10"></td>
+                <td><span class="informativo">(max. 8 caracteres)</span></td>
+            </tr>
+            <tr>
+                <td class="direita"><label for="">Confirmar senha:</label></td>
+                <td><input type="password" id="txtConfirma" maxlength="8" size="10"></td>
+                <td><span class="informativo">(max. 8 caracteres)</span></td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" value="Entrar" onclick="valida()">
+                    <input type="button" value="Limpar" onclick="reset()">
+                </td>
+                <td></td>
+            </tr>
+
+
+    </form>
+</body>
+
+</html>

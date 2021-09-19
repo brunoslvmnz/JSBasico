@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+    
+    <script>
+        sorteados = [];
+        function puxaCarta() {
+            carta = parseInt(Math.random() * 27 + 1);
+            while (sorteados.includes(carta)) {
+                carta = parseInt(Math.random() * 27 + 1);
+            }
+            sorteados.push(carta);
+            return carta;
+        }
+
+        document.write(`<h3>Jogador 1: </h3>`);
+        puxaCarta();
+        document.write(`<img src="cartas/carta${carta}.PNG">`);
+        puxaCarta();
+        document.write(`<img src="cartas/carta${carta}.PNG">`);
+        puxaCarta();
+        document.write(`<img src="cartas/carta${carta}.PNG">`);
+
+        document.write(`<h3>Jogador 2: </h3>`);
+        puxaCarta();
+        document.write(`<img src="cartas/carta${carta}.PNG">`);
+        puxaCarta();
+        document.write(`<img src="cartas/carta${carta}.PNG">`);
+        puxaCarta();
+        document.write(`<img src="cartas/carta${carta}.PNG">`);
+
+        document.write(`<h3>Jogador 3: </h3>`);
+        puxaCarta();
+        document.write(`<img src="cartas/carta${carta}.PNG">`);
+        puxaCarta();
+        document.write(`<img src="cartas/carta${carta}.PNG">`);
+        puxaCarta();
+        document.write(`<img src="cartas/carta${carta}.PNG">`);
+
+        document.write(`<h3>Jogador 4: </h3>`);
+        puxaCarta();
+        document.write(`<img src="cartas/carta${carta}.PNG">`);
+        puxaCarta();
+        document.write(`<img src="cartas/carta${carta}.PNG">`);
+        puxaCarta();
+        document.write(`<img src="cartas/carta${carta}.PNG">`);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+
+}
+
+nav {
+    text-align: center;
+    padding-top: 100px;
+}
+
+li{
+    padding: 5px;
+    font-family: Calibri;
+    font-size: 30px;
+}
+a:link,
+a:visited {
+    text-decoration: none;
+    color: black;
+    font-family: arial;
+    font-size: 30px;
+    text-align: center;
+}
+
+p{
+    color: black;
+    font-family: arial;
+    font-size: 30px;
+
+}
+
+h3{
+    color: black;
+    font-family: arial;
+    font-size: 45px;
+}

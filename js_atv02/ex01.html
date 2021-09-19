@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        primNome = prompt("Qual o seu primeiro nome?");
+        segNome = prompt("Qual o seu segundo nome?");
+        vezes = prompt("Quantas vezes?");
+        for (i = 1; i <= vezes; i++) {
+            cor = prompt("Qual cor?");
+            if (cor = "preto") {
+                r = 000;
+                g = 000;
+                b = 000;
+            }
+            if (cor = "vermelho") {
+                r = 255;
+                g = 000;
+                b = 000;
+            }
+            if (cor = "verde") {
+                r = 000;
+                g = 255;
+                b = 000;
+            }
+            if (cor = "azul") {
+                r = 000;
+                g = 000;
+                b = 255;
+            }
+            document.write(`<p style="color: rgb(${r},${g},${b}")>${i} - ${primNome} ${segNome}</p>`);
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

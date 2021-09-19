@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        texto = prompt("Informe um texto: ", "amor deus sabedoria amizade companheirismo");
+        letra = prompt("Informe uma letra: ", "a");
+        palavras = texto.split(" ");
+        vetorLetras = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y", "z"];
+        for (i = 0; i < vetorLetras.length; i++) {
+            letra = vetorLetras[i]; // "b"
+            for (j = 0; j < palavras.length; j++) {
+                if (palavras[j].charAt(0) == letra)
+                    document.write(`${palavras[j]} - `);
+            }
+            document.write(`<p></p>`);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

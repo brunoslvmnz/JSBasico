@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+h1 {
+    font-size: 24px;
+    color:blue;
+    font-family: verdana;
+    text-align: center;
+}
+
+.informativo {
+    color:red;
+    font-family: verdana;
+    font-size: 10px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.direita {
+    text-align: right;
+}
+
+
+a:link,
+a:visited {
+    color: rgb(177, 180, 1);
+    text-decoration: none;
+    transition: all .5s;
+    display: inline-block;
+}
+a:hover{
+    color: rgb(8, 226, 255);
+}
+
+.menu {
+        background-color: rgb(0, 0, 0);
+        border-radius: 5px;
+        display: inline-block;
+        padding: 10px;
+        margin: 10px;
+        list-style-type: none;
+        font-size: 50px;
+}
+
+ul {
+    list-style-type: none;
+}

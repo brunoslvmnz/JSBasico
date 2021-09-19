@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Calcular(){
+            nota1 = parseInt(document.getElementById("nota1").value);
+            nota2 = parseInt(document.getElementById("nota2").value);
+            if (nota1 == "") {
+                alert("Valor inválido! Digite um número");
+                document.getElementById("nota1").focus;
+                return;
+            }
+            else if (nota2 == "") {
+                alert("Valor inválido! Digite um número");
+                document.getElementById("nota2").focus;
+                return;
+            }
+            else
+                final = nota1 + nota2; 
+                if (final >= 60)
+                alert(`Aluno aprovado! Parabéns! O aluno foi aprovado com a nota de ${final}`);
+                else 
+                alert(`Aluno reprovado! :(, faltaram ${60-final} pontos para a aprovação`);
+        }
+    </script>
+
+</head>
+<body>
+    <table>
+        <tr>
+            <td><label for="">Nota (1ºBibestre)</label></td>
+            <td><input type="text" id="nota1"></td>
+        </tr>
+        <tr>
+            <td><label for="">Nota (2ºBibestre)</label></td>
+            <td><input type="text" id="nota2"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="Resultado" onclick="Calcular()"></td>
+        </tr>
+    </table>
+</body>
+</html>

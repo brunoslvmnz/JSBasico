@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+    </style>
+
+    <script>
+        quant = Number(prompt("Quantos passageiros?"));
+        pessoas = [];
+        passageira = [];
+        passageiro = [];
+
+        for (i = 0; i < quant; i++) {
+            pessoas[i] = prompt("Informe o nome do passageiro");
+            mf = (prompt("Informe so o passageiro é Homem ou Mulher(M/F)"))
+            if (mf == 'F') {
+                passageira.push(pessoas[i])
+            }
+            if (mf == 'M') {
+                passageiro.push(pessoas[i])
+            }
+        }
+        passageira.sort();
+        passageiro.sort();
+        document.write(`<table><center>`);
+        for (i = 0; i < quant; i++) {
+            if (passageira[i])
+                document.write(`<tr><td>${passageira[i]}</td>`);
+            else
+                document.write(`<tr><td> - </td>`);
+            if (passageiro[i])
+                document.write(`<td>${passageiro[i]}</td></tr>`);
+            else
+                document.write(`<td> - </td></tr>`);
+        }
+        document.write(`</table></center>`);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

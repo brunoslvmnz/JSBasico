@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+    
+    <script>
+        pessoas = parseInt(prompt("Informe o numero de pessoas:"));
+        nomes = [];
+        sorteados = [];
+
+        for (var i = 0; i < pessoas; i++) {
+            nomes.push(prompt("Informe nome"));
+        }
+        sorteado1 = parseInt(Math.random() * pessoas);
+        document.write(`<p>1º: ${nomes[sorteado1]}</p>`);
+        sorteados.push(sorteado1);
+
+        sorteado2 = parseInt(Math.random() * pessoas);
+        while (sorteados.includes(sorteado2)) {
+            sorteado2 = parseInt(Math.random() * pessoas);
+        }
+        sorteados.push(sorteado2);
+        document.write(`<p>2º: ${nomes[sorteado2]}</p>`);
+
+        sorteado3 = parseInt(Math.random() * pessoas);
+        while (sorteados.includes(sorteado3)) {
+            sorteado3 = parseInt(Math.random() * pessoas);
+        }
+        sorteados.push(sorteado3);
+        document.write(`<p>3º: ${nomes[sorteado3]}</p>`);
+
+        sorteado4 = parseInt(Math.random() * pessoas);
+        while (sorteados.includes(sorteado4)) {
+            sorteado4 = parseInt(Math.random() * pessoas);
+        }
+        sorteados.push(sorteado4);
+        document.write(`<p>4º: ${nomes[sorteado4]}</p>`);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

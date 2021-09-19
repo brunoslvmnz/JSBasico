@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+    
+    <script>
+        jogador1 = parseInt(Math.random() * 3 + 1);
+        jogador2 = parseInt(Math.random() * 3 + 1);
+
+        document.write(`<h3>Jogador 1:</h3><p><img src="ppt/ppt0${jogador1}.png"><p>`);
+        document.write(`<h3>Jogador 2:</h3><p><img src="ppt/ppt0${jogador2}.png"><p>`);
+
+        if (jogador1 == jogador2)
+            document.write(`<h3>EMPATE!</h2>`);
+        else if (jogador1 == 3 && jogador2 == 1)
+            document.write(`<h3>JOGADOR 1 VENCEU!</h2>`);
+        else if (jogador1 == 1 && jogador2 == 3)
+            document.write(`<h3>JOGADOR 2 VENCEU!</h2>`);
+        else if (jogador1 < jogador2)
+            document.write(`<h3>JOGADOR 1 VENCEU!</h2>`);
+        else
+            document.write(`<h3>JOGADOR 2 VENCEU!</h2>`);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
