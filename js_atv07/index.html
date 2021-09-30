@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        .quadro {
+            border: 3px solid black;
+            padding: 15px;
+            margin: 2px;
+            background-color: #BDDCB9;
+            transition: 2s;
+            font-family: Arial;
+            font-weight: bold;
+            color: black;
+        }
+
+        .quadro:hover {
+            background-color: #2B901F;
+        }
+
+        img {
+            width: 183px;
+            height: 275px;
+            margin: 5px;
+        }
+
+        h3 {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            font-family: Arial;
+            font-weight: bold;
+            color: red;
+        }
+
+        .votos {
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+    <script>
+        eleitorado = [];
+
+        function vota(cand) {
+            eleitor = prompt("Informe seu CPF")
+            if (eleitorado.includes(eleitor)) {
+                alert("Este CPF ja votou");
+            }
+            else {
+                votos = parseInt(document.getElementById(cand).value);
+                if (isNaN(votos)) {
+                    votos = 0;
+                }
+                eleitorado.push(eleitor);
+                document.getElementById(cand).innerHTML = ++votos;
+            }
+
+
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <section class="container">
+        <div>
+            <h3>Candidato 1</h3>
+            <div class="quadro">
+                <p>Mickey</p>
+                <img src="img/candidato1.jpg" alt="" onclick="vota('mickey')">
+                <p>Número de votos: <span class="votos" id="mickey">0</span></p>
+            </div>
+        </div>
+
+        <div>
+            <h3>Candidato 2</h3>
+            <div class="quadro">
+                <p>Minnie</p>
+                <img src="img/candidato2.jpg" alt="" onclick="vota('minnie')">
+                <p>Número de votos: <span class="votos" id="minnie">0</span></p>
+            </div>
+        </div>
+
+        <div>
+            <h3>Candidato 3</h3>
+            <div class="quadro">
+                <p>Pluto</p>
+                <img src="img/candidato3.jpg" alt="" onclick="vota('pluto')">
+                <p>Número de votos: <span class="votos" id="pluto">0</span></p>
+            </div>
+        </div>
+
+        <div>
+            <h3>Candidato 4</h3>
+            <div class="quadro">
+                <p>Pateta</p>
+                <img src="img/candidato4.jpg" alt="" onclick="vota('pateta')">
+                <p>Número de votos: <span class="votos" id="pateta">0</span></p>
+            </div>
+        </div>
+
+
+    </section>
+</body>
+
+</html>
