@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        h1{
+           text-align: center;
+           color:red;
+        }
+        h2{
+            color:green;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .caixa{
+            margin: 10px;
+        }
+    </style>
+
+    <script>
+        carro = 1;
+
+
+        function mostraCarros() {
+            tempo = setInterval("mostra()", 1000);
+        }
+
+        function pause() {
+            clearInterval(tempo);
+        }
+
+        function mostra() {
+            carro++;
+            if (carro > 3) carro = 1;
+
+            document.getElementById("teste").innerHTML = carro;
+            if (carro = 1) {
+                document.getElementById("car").src = `imagens/civic.jpg`;
+                document.getElementById("nome").innerHTML = `Nome: Civic`;
+                document.getElementById("motor").innerHTML = `Potência: 140cv`;
+                document.getElementById("garantia").innerHTML = `Garantia: 3 anos`;
+                document.getElementById("consumo").innerHTML = `Consumo: 9,2km/l`;
+            }
+            if (carro = 2) {
+                document.getElementById("carro").src = `imagens/focus.jpg`;
+                document.getElementById("nome").innerHTML = `Nome: Focus`;
+                document.getElementById("motor").innerHTML = `Potência: 172cv`;
+                document.getElementById("garantia").innerHTML = `Garantia: 5 anos`;
+                document.getElementById("consumo").innerHTML = `Consumo: 8,5km/l`;
+            }
+            if (carro = 3) {
+                document.getElementById("carro").src = `imagens/corola.jpg`;
+                document.getElementById("nome").innerHTML = `Nome: Corola`;
+                document.getElementById("motor").innerHTML = `Potência: 155cv`;
+                document.getElementById("garantia").innerHTML = `Garantia: 3 anos`;
+                document.getElementById("consumo").innerHTML = `Consumo: não foi informado`;
+            }
+        }
+    </script>
+
+</head>
+
+<body onload="mostraCarros()">
+    <h1>Lançamentos 2014 - Carros Sedãs</h1>
+    <div class="container">
+        <div class="caixa">
+            <img src="imagens/corola.jpg" alt="" id="car" onmouseenter="pause()" onmouseout="mostraCarros()">
+        </div>
+        <div class="caixa">
+            <h2>Caracteristicas do Carro</h2>
+            <ul>
+                <li id="nome">Nome: Corola</li>
+                <li id="motor">Potência do motor: 155cv</li>
+                <li id="garantia">Garantia: 3 anos</li>
+                <li id="consumo">Consumo: não foi informado</li>
+            </ul>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
