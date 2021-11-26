@@ -1,0 +1,22 @@
+body{
+    background-color: #02afa1;
+}
+div {
+    max-width: 600px;
+    background-color:#FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: sans-serif;
+    margin:auto;
+    text-align:center;
+}
+form {
+    text-align:left;
+    display: flex;
+    flex-flow: column;
+}
+label {
+    padding: 5px;
+}
+
+
